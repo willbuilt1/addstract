@@ -1,0 +1,15 @@
+.b-margin-small{
+    margin-bottom: 1rem;
+}
+.b-margin-large{
+    margin-bottom: 2rem;
+}
+
+.wrapper{
+    max-width: 1080px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+

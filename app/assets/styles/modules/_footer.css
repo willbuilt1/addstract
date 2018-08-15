@@ -1,0 +1,51 @@
+.footer{
+    padding: 2rem 0;
+    display: flex;
+    justify-content: space-between;
+
+    
+    &__language{
+        display: flex;
+        align-items: flex-start;
+
+        & img{
+            margin-right: 1rem;
+        }
+    }
+
+    li{
+        list-style: none;
+    }
+
+    a{
+        text-decoration: none;
+        color: $mainColor;
+
+        &::visited{
+                color: $mainColor;
+            }
+    }
+
+    &__contact{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        &--address{
+            display: flex;
+            text-align: right;
+            align-items: center;
+
+            & div:first-child{
+                margin-right: 1rem;
+            }
+        }
+        &--icons{
+            text-align: right;
+
+            & a:not(:last-child){
+                margin-right: 1rem;
+            }
+        }
+    }
+}

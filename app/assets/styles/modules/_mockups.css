@@ -1,0 +1,28 @@
+.mockups{
+    display: flex;
+    justify-content: flex-end;
+
+    &__left{
+        width: 60%;
+        position: relative;
+    }
+
+    &__right{
+        width: 40%;
+        margin: auto;
+        padding: 15rem 0 20rem 5rem;
+    }
+
+    &__images{
+        position: absolute;
+        display: block;
+
+        &--1{
+            z-index: 1;
+            top: 15%;
+        }
+        &--2{
+            left: 18%;
+        }
+    }
+}

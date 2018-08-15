@@ -1,0 +1,29 @@
+.btn{
+    background: linear-gradient(to top right, #F3618A, #2A7AFF);
+    color: #FFF;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    display: inline-block;
+    border-radius: 25px;
+    font-size: 1.8rem;
+    font-weight: 250;
+
+    &--secondary{
+        padding: 1px;
+    }
+
+    & span{
+	background: $mainBlue;
+	border-radius: 25px;
+    padding: 1rem 2rem;
+	display: flex;
+	justify-content: center;
+    align-items: center;
+	transition: background .5s ease-in;
+	
+    &:hover{
+        background: linear-gradient(to top right, #F3618A, #2A7AFF);
+    }
+}
+
+}

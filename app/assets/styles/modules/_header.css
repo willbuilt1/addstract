@@ -1,0 +1,33 @@
+.header{
+    padding: 2rem 0;
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+
+    &__logo{
+        display: inline-block;
+    }
+
+    &__nav{
+        float: right;
+        padding: 1rem 0;
+
+
+        li{
+            display: inline-block;
+            list-style: none;
+            font-size: 1.5rem;
+        }
+
+        a{
+            text-decoration: none;
+            padding-right: 1rem;
+            color: $mainColor;
+
+            &::visited{
+                color: $mainColor;
+            }
+
+        }
+    }
+}
