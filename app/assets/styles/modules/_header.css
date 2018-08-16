@@ -1,8 +1,14 @@
 .header{
     padding: 2rem 0;
     position: fixed;
-    z-index: 2;
+    z-index: 10;
     width: 100%;
+    transition: all 250ms ease-out;
+
+    &--dark{
+        background: linear-gradient(rgba(#102131,0.8), rgba(#7887A7, 0.8));
+        padding: 1rem 0;
+    }
 
     &__logo{
         display: inline-block;
@@ -24,8 +30,16 @@
             padding-right: 1rem;
             color: $mainColor;
 
+            .header--dark &{
+                color: white;
+            }
+
             &::visited{
                 color: $mainColor;
+            }
+
+            &.current-link{
+                color: $mainPink;
             }
 
         }

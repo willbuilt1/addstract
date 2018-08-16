@@ -427,9 +427,15 @@ body {
 .header{
     padding: 2rem 0;
     position: fixed;
-    z-index: 2;
+    z-index: 10;
     width: 100%;
+    transition: all 250ms ease-out;
 }
+
+.header--dark{
+        background: linear-gradient(rgba(16,33,49,0.8), rgba(120,135,167, 0.8));
+        padding: 1rem 0;
+    }
 
 .header__logo{
         display: inline-block;
@@ -453,8 +459,16 @@ body {
 
         }
 
+.header--dark .header__nav a{
+                color: white;
+            }
+
 .header__nav a::visited{
                 color: #7887A7;
+            }
+
+.header__nav a.current-link{
+                color: #F3618A;
             }
 
 .hero{
@@ -770,3 +784,16 @@ body {
 .footer__contact--icons a:not(:last-child){
                 margin-right: 1rem;
             }
+
+.reveal-item{
+    opacity: 0;
+    transition: all 1s ease-out;
+    -webkit-transform: scale(1.15);
+            transform: scale(1.15);
+}
+
+.reveal-item--visible{
+        -webkit-transform: scale(1);
+                transform: scale(1);
+        opacity: 1;
+    }
