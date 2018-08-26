@@ -14,4 +14,7 @@ body{
     background-color: $mainBlue;
 }
 
+section{
+    overflow: hidden;
+}
 

@@ -357,6 +357,10 @@ body{
     background-color: #102131;
 }
 
+section{
+    overflow: hidden;
+}
+
 body {
     font-family: "Montserrat", sans-serif;
     font-weight: 400;
@@ -534,16 +538,47 @@ body {
     display: flex;
 }
 
+@media (max-width:768px) {
+
+.features{
+        flex-direction: column;
+        align-items: center
+} 
+    }
+
 .features__left{
         padding: 10rem 0;
-        width:40%;
+        width:35%;
         margin: auto;
+    }
+
+@media (max-width:768px) {
+
+.features__left{
+            padding: 0;
+            width: 100%;
+            margin-bottom: 4rem
+    }
+
+            .features__left .bodytext{
+                text-align: justify;
+            } 
     }
 
 .features__right{
         padding: 5rem;
-        width:60%;
+        width:65%;
         position: relative;
+    }
+
+@media (max-width:768px) {
+
+.features__right{
+            padding: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between
+    } 
     }
 
 .features__box{
@@ -556,6 +591,19 @@ body {
         text-align: center;
         -webkit-transform: rotate(-45deg);
                 transform: rotate(-45deg);
+        position: absolute;
+    }
+
+@media (max-width:768px) {
+
+.features__box{
+            position: initial;
+            display: inline-block;
+            -webkit-transform: rotate(0);
+                    transform: rotate(0);
+            width: 20vw;
+            height: 20vw
+    } 
     }
 
 .features__box-image{
@@ -573,35 +621,47 @@ body {
 
 .features__box--top{
             color: #986CC0;
-            position: absolute;
-            top: 10%;
-            left: 50%;
+            top: 6%;
+            left: 42%;
             width: 12rem;
-            height: 12rem;        
+            height: 12rem;
         }
+
+@media (max-width:768px) {
+
+.features__box--top{
+                width: 20vw;
+                height: 20vw
+        } 
+    }
 
 .features__box--left{
             color: #D266A0;
-            position: absolute;
-            left: 20%;
+            left: 14%;
             top: 28%;
         }
 
 .features__box--right{
             color: #7172D7;
-            position: absolute;
-            left: 70%;
-            top: 35%;
+            left: 63%;
+            top: 25%;
         }
 
 .features__box--bottom{
             color: #46569F;
-            position: absolute;
             width: 12rem;
             height: 12rem; 
-            top: 68%;
-            left: 49%;       
+            top: 62%;
+            left: 45%;
         }
+
+@media (max-width:768px) {
+
+.features__box--bottom{
+                width: 20vw;
+                height: 20vw
+        } 
+    }
 
 .mockups{
     display: flex;
@@ -674,6 +734,7 @@ body {
 .video__container{
         position: relative;
         margin-bottom: -4rem;
+        width:100%
     }
 
 .video__card{

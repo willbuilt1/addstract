@@ -7,3 +7,4 @@ new RevealOnScroll($('.header__right'), '85%');
 new RevealOnScroll($('.features__right'), '80%');
 new RevealOnScroll($('.mockups__left'), '80%');
 new RevealOnScroll($('.goodies__right'), '80%');
+new RevealOnScroll($('.video__container'), '80%');

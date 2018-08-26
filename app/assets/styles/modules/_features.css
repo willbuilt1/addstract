@@ -1,15 +1,37 @@
 .features{
     display: flex;
 
+    @mixin atMedium {
+        flex-direction: column;
+        align-items: center;
+    }
+
     &__left{
         padding: 10rem 0;
-        width:40%;
+        width:35%;
         margin: auto;
+
+        @mixin atMedium{
+            padding: 0;
+            width: 100%;
+            margin-bottom: 4rem;
+
+            & .bodytext{
+                text-align: justify;
+            }
+        }
     }
     &__right{
         padding: 5rem;
-        width:60%;
+        width:65%;
         position: relative;
+
+        @mixin atMedium{
+            padding: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
     }
 
     &__box{
@@ -21,6 +43,15 @@
         border-radius: 1rem;
         text-align: center;
         transform: rotate(-45deg);
+        position: absolute;
+
+        @mixin atMedium{
+            position: initial;
+            display: inline-block;
+            transform: rotate(0);
+            width: 20vw;
+            height: 20vw;
+        }
 
         &-image{
             position: relative;
@@ -36,31 +67,37 @@
 
         &--top{
             color: #986CC0;
-            position: absolute;
-            top: 10%;
-            left: 50%;
+            top: 6%;
+            left: 42%;
             width: 12rem;
             height: 12rem;        
+
+            @mixin atMedium{
+                width: 20vw;
+                height: 20vw;
+            }
         }
         &--left{
             color: #D266A0;
-            position: absolute;
-            left: 20%;
+            left: 14%;
             top: 28%;
         }
         &--right{
             color: #7172D7;
-            position: absolute;
-            left: 70%;
-            top: 35%;
+            left: 63%;
+            top: 25%;
         }
         &--bottom{
             color: #46569F;
-            position: absolute;
             width: 12rem;
             height: 12rem; 
-            top: 68%;
-            left: 49%;       
+            top: 62%;
+            left: 45%;       
+
+            @mixin atMedium{
+                width: 20vw;
+                height: 20vw;
+            }
         }
     }
 }
