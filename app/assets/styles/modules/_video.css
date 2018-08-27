@@ -1,22 +1,42 @@
 .video{
     text-align: center;
 
+    & .bodytext{
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+
     &__container{
         position: relative;
-        margin-bottom: -4rem;
-        width:100%
+        width:100%;
+        margin-bottom: 3rem;
+    }
+
+    &__main{
+        @mixin atMedium{
+            width: 100%;
+            padding: 0 10%;
+        }
     }
 
     &__card{
         position: absolute;
         top: 12%;
         left: 60%;
+
+         @mixin atMedium{
+            display: none;
+        }
     }
 
     &__panel{
         position: absolute;
         top: 25%;
         left: 70%;
+
+        @mixin atLarge{
+            display: none;
+        }
     }
 
     &__btn{

@@ -12,9 +12,18 @@ body {
     line-height: 1.2;
     font-weight: 300;
     margin-bottom: 1rem;
+
+    @mixin atSmall{
+        font-size: 2.8rem;
+    }
 }
 
 .bodytext{
     font-size: 1.5rem;
     font-weight: 300;
+
+    @mixin atMedium{
+        text-align: justify;
+        font-size: 1.3rem;
+    }
 }

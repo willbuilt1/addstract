@@ -2,27 +2,41 @@
     display: flex;
     justify-content: flex-end;
 
+    @mixin atMedium{
+        flex-direction: column; 
+
+        &.b-margin-large{
+            margin-bottom: 0;
+        }       
+    }
+
     &__left{
         width: 60%;
         position: relative;
+
+        @mixin atMedium{
+            width: 100%;
+            order: 1;
+        }
     }
 
     &__right{
         width: 40%;
         margin: auto;
         padding: 15rem 0 20rem 5rem;
+
+         @mixin atMedium{
+            width: 100%;
+            padding: 0;
+        }
     }
 
     &__images{
-        position: absolute;
-        display: block;
-
-        &--1{
-            z-index: 1;
-            top: 15%;
-        }
-        &--2{
-            left: 18%;
+        width: 100%;
+        
+        @mixin atMedium{
+            width:60%;
+            margin-left: 25%;
         }
     }
 }

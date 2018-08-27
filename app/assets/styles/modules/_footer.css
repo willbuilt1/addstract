@@ -3,7 +3,10 @@
     display: flex;
     justify-content: space-between;
 
-    
+    @mixin atSmall{
+        flex-wrap: wrap;
+    }
+
     &__language{
         display: flex;
         align-items: flex-start;
@@ -31,10 +34,23 @@
         flex-direction: column;
         justify-content: space-between;
 
+        @mixin atSmall{
+            flex-direction: row;
+            width: 100%;
+        }
+
         &--address{
             display: flex;
             text-align: right;
             align-items: center;
+
+            @mixin atSmall{
+                text-align: left;
+
+                & img{
+                    display: none;
+                }
+            }
 
             & div:first-child{
                 margin-right: 1rem;
@@ -42,6 +58,10 @@
         }
         &--icons{
             text-align: right;
+            
+            @mixin atSmall{
+                width: 30%;
+            }
 
             & a:not(:last-child){
                 margin-right: 1rem;

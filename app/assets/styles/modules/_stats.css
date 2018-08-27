@@ -3,6 +3,16 @@
     padding-bottom: 10rem;
     border-bottom: solid 1px $mainColor;
 
+    @mixin atMedium{
+        padding-bottom: 5rem;
+    }
+
+    & .bodytext{
+        @mixin atMedium{
+            text-align: center;
+        }
+    }
+
     &__charts{
         display: grid;
         margin-top: 3rem;

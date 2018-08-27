@@ -15,10 +15,6 @@
             padding: 0;
             width: 100%;
             margin-bottom: 4rem;
-
-            & .bodytext{
-                text-align: justify;
-            }
         }
     }
     &__right{
@@ -31,6 +27,13 @@
             width: 100%;
             display: flex;
             justify-content: space-between;
+        }
+
+        @mixin atSmall{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-gap: 2rem;
+            justify-items: center;
         }
     }
 
@@ -46,11 +49,16 @@
         position: absolute;
 
         @mixin atMedium{
-            position: initial;
+            position: static;
             display: inline-block;
             transform: rotate(0);
             width: 20vw;
             height: 20vw;
+        }
+
+        @mixin atSmall{
+            width: 33vw;
+            height: 33vw;
         }
 
         &-image{
@@ -76,6 +84,11 @@
                 width: 20vw;
                 height: 20vw;
             }
+
+            @mixin atSmall{
+                width: 33vw;
+                height: 33vw;
+            }
         }
         &--left{
             color: #D266A0;
@@ -97,6 +110,11 @@
             @mixin atMedium{
                 width: 20vw;
                 height: 20vw;
+            }
+
+            @mixin atSmall{
+                width: 33vw;
+                height: 33vw;
             }
         }
     }
