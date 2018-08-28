@@ -1,13 +1,22 @@
 .header{
-    padding: 2rem 0;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
     position: fixed;
     z-index: 10;
     width: 100%;
     transition: all 250ms ease-out;
+    display: flex;
+    justify-content: space-between;
+
+    @mixin atSmall{
+        flex-direction: column;
+        align-items: center;
+    }
 
     &--dark{
         background: linear-gradient(rgba(#102131,0.8), rgba(#7887A7, 0.8));
-        padding: 1rem 0;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
     }
 
     &__logo{
@@ -15,8 +24,19 @@
     }
 
     &__nav{
-        float: right;
-        padding: 1rem 0;
+        transition: all .5s ease-in;
+
+        @mixin atSmall{
+            visibility: hidden;
+            opacity: 0;
+            max-height: 0;
+        }
+
+        &--open{
+            visibility: visible;
+            opacity: 1;
+            max-height: 46px;
+        }
 
 
         li{
@@ -42,6 +62,63 @@
                 color: $mainPink;
             }
 
+        }
+    }
+
+    &__button{
+        margin-top: 5px;
+        width:30px;
+        height: 15px;
+        position: relative;
+        cursor: pointer;
+        display: none;
+
+        @mixin atSmall{
+            display: block;
+        }
+
+
+        &:hover > *{
+            background-color: $mainPink;
+        }
+
+        &--top{
+            content: '';
+            position: absolute;
+            top: 0px;
+            height: 1px;
+            width: 30px;
+            background-color: white;
+            transition: transform 0.5s ease-in;
+        }
+
+        &--middle{
+            position: absolute;
+            top: 6px;
+            right: 5px;
+            height: 1px;
+            width: 20px;
+            background-color: white;
+        }
+
+        &--bottom{
+            content: '';
+            position: absolute;
+            top: 12px;
+            right: 10px;
+            height: 1px;
+            width: 10px;
+            background-color: white;
+            transition: transform 0.5s ease-in;
+        }
+        &--open{
+            & .header__button--top{
+                transform: scaleX(.33);
+            }
+
+            & .header__button--bottom{
+                transform: scaleX(3);
+            }
         }
     }
 }

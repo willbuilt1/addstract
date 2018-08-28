@@ -444,16 +444,28 @@ body {
     }
 
 .header{
-    padding: 2rem 0;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
     position: fixed;
     z-index: 10;
     width: 100%;
     transition: all 250ms ease-out;
+    display: flex;
+    justify-content: space-between;
 }
+
+@media (max-width:600px) {
+
+.header{
+        flex-direction: column;
+        align-items: center
+}
+    }
 
 .header--dark{
         background: linear-gradient(rgba(16,33,49,0.8), rgba(120,135,167, 0.8));
-        padding: 1rem 0;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
     }
 
 .header__logo{
@@ -461,9 +473,23 @@ body {
     }
 
 .header__nav{
-        float: right;
-        padding: 1rem 0;
+        transition: all .5s ease-in;
     }
+
+@media (max-width:600px) {
+
+.header__nav{
+            visibility: hidden;
+            opacity: 0;
+            max-height: 0
+    }
+    }
+
+.header__nav--open{
+            visibility: visible;
+            opacity: 1;
+            max-height: 46px;
+        }
 
 .header__nav li{
             display: inline-block;
@@ -488,6 +514,70 @@ body {
 
 .header__nav a.current-link{
                 color: #F3618A;
+            }
+
+.header__button{
+        margin-top: 5px;
+        width:30px;
+        height: 15px;
+        position: relative;
+        cursor: pointer;
+        display: none;
+    }
+
+@media (max-width:600px) {
+
+.header__button{
+            display: block
+    }
+    }
+
+.header__button:hover > *{
+            background-color: #F3618A;
+        }
+
+.header__button--top{
+            content: '';
+            position: absolute;
+            top: 0px;
+            height: 1px;
+            width: 30px;
+            background-color: white;
+            transition: -webkit-transform 0.5s ease-in;
+            transition: transform 0.5s ease-in;
+            transition: transform 0.5s ease-in, -webkit-transform 0.5s ease-in;
+        }
+
+.header__button--middle{
+            position: absolute;
+            top: 6px;
+            right: 5px;
+            height: 1px;
+            width: 20px;
+            background-color: white;
+        }
+
+.header__button--bottom{
+            content: '';
+            position: absolute;
+            top: 12px;
+            right: 10px;
+            height: 1px;
+            width: 10px;
+            background-color: white;
+            transition: -webkit-transform 0.5s ease-in;
+            transition: transform 0.5s ease-in;
+            transition: transform 0.5s ease-in, -webkit-transform 0.5s ease-in;
+        }
+
+.header__button--open .header__button--top{
+                -webkit-transform: scaleX(.33);
+                        transform: scaleX(.33);
+            }
+
+.header__button--open .header__button--bottom{
+                -webkit-transform: scaleX(3);
+                        transform: scaleX(3);
             }
 
 .hero{
