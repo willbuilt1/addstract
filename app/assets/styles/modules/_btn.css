@@ -7,6 +7,17 @@
     border-radius: 25px;
     font-size: 1.8rem;
     font-weight: 250;
+    transition: all .1s ease-out;
+
+    &:hover{
+        transform: translateY(-2px);
+        box-shadow: 0 2px 3px 1px rgba(0,0,0,0.8);
+    }
+
+    @mixin atSmall{
+        font-size: 1.3rem;
+        font-weight: 300;
+    }
 
     &--secondary{
         padding: 1px;

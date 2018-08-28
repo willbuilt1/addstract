@@ -15,6 +15,7 @@
 
         @mixin atSmall{
             text-align: justify;
+            font-weight: 300;
             margin-bottom: 1rem;
             width: 100%;
         }
@@ -32,7 +33,7 @@
             margin-right: 1rem;
 
             @mixin atMedium{
-                margin-right: 0rem;
+                margin-right: 2rem;
                 margin-bottom: 1rem; 
                 }
         }

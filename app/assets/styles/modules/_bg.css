@@ -1,0 +1,54 @@
+.bg{
+    &--1{
+	width: 1363px;
+	height: 2103px;
+	background-color: #1F2B44;
+	z-index: -1;
+	position: absolute;
+	left: -1000px;
+	transform: rotate(43deg);
+	top: -700px;
+    border-radius: 50px;
+    box-shadow: 1rem 1rem 1rem black;
+    }
+
+    &--2{
+	width: 1000px;
+	height: 1500px;
+	background-color: #253659;
+	z-index: -2;
+	position: absolute;
+	transform: rotate(43deg);
+	top: -800px;
+    border-radius: 50px;
+    box-shadow: 1rem 1rem 1rem black;
+    }
+
+    &--3{
+	width: 720px;
+	height: 720px;
+	background-color: #102131;
+	z-index: -3;
+	position: absolute;
+	transform: rotate(43deg);
+    left: -100px;
+	top: 1500px;
+    border-radius: 50px;
+    box-shadow: 1rem 1rem 1rem black;
+    }
+
+    &--4{
+	width: 1000px;
+	height: 1500px;
+	background-color: #132638;
+	z-index: -3;
+	position: absolute;
+	transform: rotate(43deg);
+    right: -100px;
+	top: 1500px;
+    border-radius: 50px;
+    box-shadow: 1rem 1rem 1rem black;
+    }
+
+
+}

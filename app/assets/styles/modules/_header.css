@@ -1,17 +1,26 @@
 .header{
-    padding-top: 2rem;
-    padding-bottom: 2rem;
     position: fixed;
     z-index: 10;
     width: 100%;
     transition: all 250ms ease-out;
+
+    &__container{
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin: 0 auto;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    max-width: 1080px;
     display: flex;
     justify-content: space-between;
 
     @mixin atSmall{
         flex-direction: column;
         align-items: center;
+        padding-bottom: 0;
     }
+    }
+    
 
     &--dark{
         background: linear-gradient(rgba(#102131,0.8), rgba(#7887A7, 0.8));
@@ -24,18 +33,24 @@
     }
 
     &__nav{
-        transition: all .5s ease-in;
+        transition: all .25s ease-in;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
 
         @mixin atSmall{
             visibility: hidden;
             opacity: 0;
             max-height: 0;
+            padding-top: 0;
+            padding-bottom: 0;
         }
 
         &--open{
             visibility: visible;
             opacity: 1;
             max-height: 46px;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
         }
 
 
@@ -80,6 +95,7 @@
 
         &:hover > *{
             background-color: $mainPink;
+            transform: scaleY(3);
         }
 
         &--top{
@@ -89,7 +105,7 @@
             height: 1px;
             width: 30px;
             background-color: white;
-            transition: transform 0.5s ease-in;
+            transition: transform 0.25s ease-in;
         }
 
         &--middle{
@@ -99,6 +115,7 @@
             height: 1px;
             width: 20px;
             background-color: white;
+            transition: transform 0.25s ease-in;
         }
 
         &--bottom{
@@ -109,7 +126,7 @@
             height: 1px;
             width: 10px;
             background-color: white;
-            transition: transform 0.5s ease-in;
+            transition: transform 0.25s ease-in;
         }
         &--open{
             & .header__button--top{

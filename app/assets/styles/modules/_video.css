@@ -1,5 +1,6 @@
 .video{
     text-align: center;
+    overflow: visible;
 
     & .bodytext{
         margin-bottom: 2rem;
@@ -10,6 +11,14 @@
         position: relative;
         width:100%;
         margin-bottom: 3rem;
+
+        &:hover .video__card{
+            transform: translateX(30px);
+        }
+
+        &:hover .video__panel{
+            transform: translateX(100px);
+        }
     }
 
     &__main{
@@ -23,6 +32,7 @@
         position: absolute;
         top: 12%;
         left: 60%;
+        transition: all .5s ease-in;
 
          @mixin atMedium{
             display: none;
@@ -33,6 +43,7 @@
         position: absolute;
         top: 25%;
         left: 70%;
+        transition: all .5s ease-in;
 
         @mixin atLarge{
             display: none;

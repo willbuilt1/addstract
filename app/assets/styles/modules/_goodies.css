@@ -54,6 +54,7 @@
         }
         &--3{
             top: 25%;
+            right: auto;
             left: 40%;
         }
     }

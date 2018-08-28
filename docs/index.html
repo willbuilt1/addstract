@@ -1,8 +1,9 @@
+
 <!DOCTYPE html>
 <html>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="assets/styles/styles-c9b245e55f.css"/>
+  <link rel="stylesheet" href="assets/styles/styles-4b3a56da6b.css"/>
   <link href="https://fonts.googleapis.com/css?family=Montserrat:100,300,400,700,900" rel="stylesheet"> 
   <script src="assets/scripts/Vendor-a537a7e252.js"></script>
   <title>Addstract</title>
@@ -10,24 +11,33 @@
   <meta name="description" content="Consequat ullamco officia dolore dolor culpa esse mollit.">
 </head>
 <body>
+  <div class="bg--1"></div>
+  <div class="bg--2"></div>
+  <div class="bg--3"></div>
+  <div class="bg--4"></div>
+  <div class="bg--5"></div>
   <header class="header">
-    <div class="wrapper">
-      <div class="header__logo"><img src="./assets/images/logo.png" alt="Addstract Logo"></div>
-      <nav class="header__nav">
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Advantages</a></li>
-            <li><a href="#">Preview</a></li>
-            <li><a href="#">Video</a></li>
-            <li><a href="#">Contact Us</a></li>
-          </ul>
-      </nav>
-    </div>
+      <div class="header__container">
+        <div class="header__logo"><img src="./assets/images/logo.png" alt="Addstract Logo"></div>
+        <div class="header__button">
+          <div class="header__button--top"></div>
+          <div class="header__button--middle"></div>
+          <div class="header__button--bottom"></div>
+        </div>
+        <nav class="header__nav">
+            <ul>
+              <li><a href="#home" id="home-link">Home</a></li>
+              <li><a href="#about" id="about-link">About Us</a></li>
+              <li><a href="#video" id="video-link">Video</a></li>
+              <li><a href="#contact" id="contact-link">Contact Us</a></li>
+            </ul>
+        </nav>
+      </div>
   </header>
+
   
   <div class="wrapper">
-    <section class="hero b-margin-large">
+    <section class="hero b-margin-large section" id="home" data-matching-link="#home-link">
       <div class="hero__left">
         <h1 class="hero__headline">Do you want to <strong>impress</strong> your clients?</h1>
         <div><a href="#" class="btn">Get early access</a></div>
@@ -37,7 +47,7 @@
       </div>
     </section>
 
-    <section class="clients b-margin-large">
+    <section class="clients b-margin-large section" id="about" data-matching-link="#about-link">
       <div class="clients__grid">
         <div class="clients__logo"><img src="./assets/images/icons/behance.png" alt=""></div>
         <div class="clients__logo"><img src="./assets/images/icons/dribbble.png" alt=""></div>
@@ -75,14 +85,13 @@
     </section>
     <section class="mockups b-margin-large">
       <div class="mockups__left">
-        <img src="./assets/images/device1.png" alt="Mobile phone" class="mockups__images mockups__images--1">
-        <img src="./assets/images/device2.png" alt="Mobile phone" class="mockups__images mockups__images--2">
+        <img src="./assets/images/devices.png" alt="Mobile phones" class="mockups__images lazyload">
       </div>
       <div class="mockups__right">
         <div class="subheading">Display your product
           as never before</div>
         <div class="bodytext">Quick Prototyping. High fidelity mockups. Get live functional demos for all of your designs to show your genius off in the best light possible. </div>
-      </div>
+      </div> 
     </section>
     <section class="goodies b-margin-large">
       <div class="goodies__left">
@@ -90,32 +99,76 @@
         <div class="bodytext">We ensure that all our sites keep up with the latest trends with regular theme updates and new plugins to bring the best features </div>
       </div>
       <div class="goodies__right">
-        <img src="./assets/images/goodies1.png" alt="theme card" class="goodies__images goodies__images--1">
-        <img src="./assets/images/goodies2.png" alt="business card" class="goodies__images goodies__images--2">
-        <img src="./assets/images/goodies3.png" alt="business card 2" class="goodies__images goodies__images--3">
+        <img src="./assets/images/goodies1.png" alt="theme card" class="goodies__images goodies__images--1 lazyload">
+        <img src="./assets/images/goodies2.png" alt="business card" class="goodies__images goodies__images--2 lazyload">
+        <img src="./assets/images/goodies3.png" alt="business card 2" class="goodies__images goodies__images--3 lazyload">
       </div>
     </section>
-    <section class="video b-margin-large">
+    <section class="video b-margin-large section" id="video" data-matching-link="#video-link">
       <div class="subheading">Layered Video Player</div>
       <div class="bodytext">Video player like never before</div>
       <div class="video__container">
-            <img src="./assets/images/video.png" alt="Video player" class="video__main">
-            <img src="./assets/images/card.png" alt="Video player" class="video__card">
-            <img src="./assets/images/panel.png" alt="Video player" class="video__panel">
+            <img src="./assets/images/video.png" alt="Video player" class="video__main lazyload">
+            <img src="./assets/images/card.png" alt="Video player" class="video__card lazyload">
+            <img src="./assets/images/panel.png" alt="Video player" class="video__panel lazyload">
       </div>
       <div><a href="#" class="btn video__btn">Get early access</a></div>
     </section>
     <section class="stats">
       <div class="subheading">Statistics &amp; Information</div>
-      <div class="bodytext">Numbers speak loader than words</div>
-      <div class="stats__charts">
-        <img src="./assets/images/stat1.png" alt="Pie chart" class="stats__chart">
-        <img src="./assets/images/stat2.png" alt="Pie chart" class="stats__chart">
-        <img src="./assets/images/stat3.png" alt="Pie chart" class="stats__chart">
+      <div class="bodytext">Numbers speak louder than words</div>
+      <div class="stats__charts b-margin-large">
+        <div class="stats__chart"><img src="./assets/images/stat1.png" alt="Pie chart"></div>
+        <div class="stats__chart"><img src="./assets/images/stat2.png" alt="Pie chart"></div>
+        <div class="stats__chart"><img src="./assets/images/stat3.png" alt="Pie chart"></div>
+      </div>
+      <div><a href="#" class="btn btn--secondary"><span>View all data</span></a></div>
+    </section>
+    <section class="signup section" id="contact" data-matching-link="#contact-link">
+      <div class="signup__text">Build your own future.<br> Download now for free and get 100% boost!</div>
+      <div class="signup__buttons">
+        <a href="#" class="btn">Get early access</a>
+        <a href="#" class="btn btn--secondary"><span>Newsletter</span></a>
       </div>
     </section>
+    <footer class="footer">
+      <div class="footer__language bodytext">
+        <img src="./assets/images/icons/english.png" alt="English language icon">
+        <div>English&nbsp;&or;</div>
+      </div>
+      <div class="footer__links">
+        <ul class="bodytext">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Advantages</a></li>
+          <li><a href="#">Preview</a></li>
+          <li><a href="#">Video</a></li>
+        </ul>
+      </div>
+      <div class="footer__support">
+        <ul class="bodytext">
+          <li><a href="#">Terms &amp; Conditions</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Support</a></li>
+          <li><a href="#">Chrome Extension</a></li>
+        </ul>
+      </div>
+      <div class="footer__contact">
+        <div class="footer__contact--address bodytext">
+          <div>231 North Star 34th Street, Suite #100<br>Cupertino, 98103</div>
+          <div><img src="./assets/images/icons/location.png" alt=""></div>
+        </div>
+        <div class="footer__contact--icons">
+         <a href="#"><img src="./assets/images/icons/Dribbble_White.png" alt="dribble"></a>
+         <a href="#"><img src="./assets/images/icons/Instagram_White.png" alt="Instagram"></a>
+         <a href="#"><img src="./assets/images/icons/Behance_White.png" alt="Behance"></a>
+         <a href="#"><img src="./assets/images/icons/Facebook_White.png" alt="Facebook"></a>
+         <a href="#"><img src="./assets/images/icons/Medium_White.png" alt="medium"></a>
+        </div>
+      </div>
+    </footer>
 
   </div>
-  <script src="assets/scripts/App-e726a8e75b.js"></script>
+  <script src="assets/scripts/App-1705cda5ca.js"></script>
 </body>
 </html>

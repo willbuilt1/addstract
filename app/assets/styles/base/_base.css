@@ -8,10 +8,13 @@
 
 html{
     font-size: 62.5%;
+    overflow-x: hidden;
 }
 
 body{
     background-color: $mainBlue;
+    position: relative;
+    overflow-x: hidden;
 }
 
 section{

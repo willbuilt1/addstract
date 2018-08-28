@@ -10,9 +10,12 @@ class StickyHeader {
         this.createHeaderWaypoint();
         this.pageSections = $(".section");
         this.headerLinks = $(".header__nav a");
+        this.headerNav = $(".header__nav");
+        this.headerButton = $(".header__button");
         this.createPageSectionWaypoints();
         this.addSmoothScrolling();
         this.refreshWaypoints();
+        this.removeMenu();
     }
 
     refreshWaypoints(){
@@ -23,6 +26,13 @@ class StickyHeader {
     
     addSmoothScrolling(){
         this.headerLinks.smoothScroll({speed: 500});
+    }
+
+    removeMenu(){
+        window.addEventListener('scroll', e => {
+            this.headerNav.removeClass('header__nav--open');
+            this.headerButton.removeClass('header__button--open');
+        })
     }
 
     createHeaderWaypoint() {
